@@ -1,0 +1,36 @@
+public class CaseStudy1 {
+
+	public static void main(String[] args) {
+		/* Case Study 1 - Amusement Park billing.
+		 * Tickets are Rs400 each.
+		 * If number of tickets bought is 1-10, full price.
+		 * If number of tickets bought is over 10, 10% discount (Rs40) is applied, and the new price for 
+		 * each ticket is Rs360. 
+		 */
+
+		double fullprice = 400;
+		double discrate = .10;
+		double discount = fullprice * discrate;
+		double discprice = fullprice-discount;
+		int transaction1 = 5;
+		int transaction2 = 20; 
+		double tran1total, tran2total;
+		
+		if (transaction1 <= 10)
+			tran1total = transaction1 * fullprice;
+		else
+			tran1total = transaction1 * discprice;
+		System.out.println("For 1-10 tickets, the full price per ticket is Rs " + fullprice);
+		System.out.println("For more than 10 tickets, the discounted price per ticket is Rs " + discprice);
+		System.out.println("The total for " + transaction1 + " tickets is Rs" + tran1total);
+		
+		if (transaction2 <= 10)
+			tran2total = transaction2 * fullprice;
+		else
+			tran2total = transaction2 * discprice;
+		System.out.println("The total for " + transaction2 + " tickets is Rs" + tran2total);
+			
+		
+	}
+
+}
